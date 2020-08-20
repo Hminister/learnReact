@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 const UserContext = React.createContext({ nickname: "默认", level: -1 })
-const ThemeContext = React.createContext({ color: "green" });
+
 // class ProfileHeader extends Component {
 //     render () {
 //         return (
@@ -20,16 +20,10 @@ function ProfileHeader (props) {
             <UserContext.Consumer>
                 {
                     (value) => {
-                        return (<ThemeContext.Consumer>
-                            {(theme) => {
-                                return (
-                                    <div>
-                                        <h2 style={theme}>用户昵称: {value.nickname}</h2>
-                                        <h2 style={theme}>用户等级: {value.level}</h2>
-                                    </div>
-                                )
-                            }}
-                        </ThemeContext.Consumer>)
+                        return (<div>
+                            <h2>用户昵称: {this.context.nickname}</h2>
+                            <h2>用户等级: {this.context.level}</h2>
+                        </div>)
                     }
                 }
             </UserContext.Consumer>
@@ -62,9 +56,7 @@ export default class App extends Component {
         return (
             <div>
                 <UserContext.Provider value={{ nickname: "why", level: 99 }}>
-                    <ThemeContext.Provider value={{ color: 'red' }}>
-                        <Profile />
-                    </ThemeContext.Provider>
+                    <Profile />
                 </UserContext.Provider>
                 <h2>其他内容</h2>
             </div>

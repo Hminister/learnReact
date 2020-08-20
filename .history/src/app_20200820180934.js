@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 const UserContext = React.createContext({ nickname: "默认", level: -1 })
-const ThemeContext = React.createContext({ color: "green" });
+const ThemeContext = React.createContext({ color: "black" });
 // class ProfileHeader extends Component {
 //     render () {
 //         return (

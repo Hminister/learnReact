@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 const UserContext = React.createContext({ nickname: "默认", level: -1 })
-const ThemeContext = React.createContext({ color: "green" });
+const ThemeContext = React.createContext({ color: "black" });
 // class ProfileHeader extends Component {
 //     render () {
 //         return (
@@ -61,9 +61,10 @@ export default class App extends Component {
     render () {
         return (
             <div>
+                <Profile />
+
                 <UserContext.Provider value={{ nickname: "why", level: 99 }}>
                     <ThemeContext.Provider value={{ color: 'red' }}>
-                        <Profile />
                     </ThemeContext.Provider>
                 </UserContext.Provider>
                 <h2>其他内容</h2>

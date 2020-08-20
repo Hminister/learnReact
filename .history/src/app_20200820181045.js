@@ -61,9 +61,10 @@ export default class App extends Component {
     render () {
         return (
             <div>
+                <Profile />
+
                 <UserContext.Provider value={{ nickname: "why", level: 99 }}>
                     <ThemeContext.Provider value={{ color: 'red' }}>
-                        <Profile />
                     </ThemeContext.Provider>
                 </UserContext.Provider>
                 <h2>其他内容</h2>
