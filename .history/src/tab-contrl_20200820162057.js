@@ -10,12 +10,6 @@ export default class tabContrl extends Component {
             currentIndex: 0
         }
     }
-    itemClick (index) {
-        this.setState({
-            currentIndex: index
-        })
-        this.props.itemClick(index)
-    }
     render () {
         const { list } = this.props
         const { currentIndex } = this.state
@@ -31,8 +25,6 @@ export default class tabContrl extends Component {
         )
     }
 }
-
-
 tabContrl.propTypes = {
     list: PropTypes.array
 }

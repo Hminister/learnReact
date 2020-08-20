@@ -88,9 +88,8 @@ export default class App extends Component {
         }
     }
     changeItem (index) {
-        console.log(typeof index)
         this.setState({
-            currentList: this.list[index]
+            currentList: this.state.list[index]
         })
     }
     render () {

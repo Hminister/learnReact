@@ -14,7 +14,6 @@ export default class tabContrl extends Component {
         this.setState({
             currentIndex: index
         })
-        this.props.itemClick(index)
     }
     render () {
         const { list } = this.props
