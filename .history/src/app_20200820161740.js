@@ -87,7 +87,7 @@ export default class App extends Component {
             currentList: '流行'
         }
     }
-    changeItem (index) {
+    changeItem () {
         this.setState({
             currentList: this.state.list[index]
         })

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import TabContrl from './tab-contrl'
+import PropTypes from 'prop-types'
 /**
  * 父传子
  * @param {*} props
@@ -78,28 +78,36 @@ import TabContrl from './tab-contrl'
 //         )
 //     }
 // }
-
-export default class App extends Component {
+class tabContrl extends Component {
     constructor(props) {
         super(props)
-        this.list = ['流行', '新款', '精选']
-        this.state = {
-            currentList: '流行'
-        }
-    }
-    changeItem (index) {
-        this.setState({
-            currentList: this.state.list[index]
-        })
     }
     render () {
-        const { currentList } = this.state
-
+        const { list } = this.props
         return (
-            <div>
-                <TabContrl list={this.list} chooseItem={index => this.changeItem(index)}></TabContrl>
-                <h1>{currentList}</h1>
-            </div>
+            <ul>
+                {
+                    list.map((item, index) => <li>{item}</li>)
+                }
+            </ul>
+        )
+    }
+}
+tabContrl.propTypes = {
+    list: PropTypes.array
+}
+export default class App extends Component {
+    constructor() {
+        this.list: ['流行', '新款', '精选']
+
+        this.state = {
+        }
+    }
+
+    render () {
+        const { list } = this.state
+        return (
+            <tabContrl list={list}></tabContrl>
         )
     }
 }

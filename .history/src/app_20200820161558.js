@@ -87,17 +87,17 @@ export default class App extends Component {
             currentList: '流行'
         }
     }
-    changeItem (index) {
-        this.setState({
-            currentList: this.state.list[index]
-        })
-    }
+
     render () {
         const { currentList } = this.state
-
+        changeItem() {
+            this.setState({
+                currentList
+            })
+        }
         return (
             <div>
-                <TabContrl list={this.list} chooseItem={index => this.changeItem(index)}></TabContrl>
+                <TabContrl list={this.list} chooseItem={e => this.changeItem()}></TabContrl>
                 <h1>{currentList}</h1>
             </div>
         )
