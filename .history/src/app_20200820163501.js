@@ -24,9 +24,9 @@ export default class App extends Component {
         const slot = <button>点击按钮</button>
         return (
             <NavBar endSlot={slot}>
-                <span>返回</span>
-                <span>搜索</span>
-                <span>更多</span>
+                <sppn>返回</sppn>
+                <sppn>搜索</sppn>
+                <sppn>更多</sppn>
             </NavBar>
         )
 
