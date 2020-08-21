@@ -6,12 +6,9 @@ class ProfileHeader extends Component {
     render () {
         return (
             <div>
-                <button onClick={e => this.btnClick()}>按钮</button>
+                <button>按钮</button>
             </div>
         )
-    }
-    btnClick () {
-        eventBus.emit('headClick', '惦记我了')
     }
 
 }
@@ -38,12 +35,6 @@ class Profile extends Component {
 export default class App extends Component {
     componentDidMount () {
         eventBus.addListener('headClick', this.headClick)
-    }
-    headClick (v) {
-        alert(v)
-    }
-    componentWillUnmount () {
-        eventBus.removeListener('headClick', this.headClick)
     }
     render () {
         return (

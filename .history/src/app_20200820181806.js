@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { EventEmitter } from 'events'
-const eventBus = new EventEmitter()
+import { EventEmitter } from "events";
+
+const eventBus = new EventEmitter();
 
 class ProfileHeader extends Component {
     render () {
@@ -10,10 +11,10 @@ class ProfileHeader extends Component {
             </div>
         )
     }
-    btnClick () {
-        eventBus.emit('headClick', '惦记我了')
-    }
 
+    btnClick () {
+        eventBus.emit("headerClick", "why", 18);
+    }
 }
 
 
@@ -36,15 +37,19 @@ class Profile extends Component {
 }
 
 export default class App extends Component {
+
     componentDidMount () {
-        eventBus.addListener('headClick', this.headClick)
+        eventBus.addListener("headerClick", this.headerClick)
     }
-    headClick (v) {
-        alert(v)
+
+    headerClick (name, age) {
+        console.log(name, age);
     }
+
     componentWillUnmount () {
-        eventBus.removeListener('headClick', this.headClick)
+        eventBus.removeListener("headerClick", this.headerClick);
     }
+
     render () {
         return (
             <div>
