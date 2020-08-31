@@ -4,11 +4,11 @@ import Home from './home'
 import Profile from './profile'
 export default class App extends Component {
 
+
     render () {
         return (
             <div>
                 <Home></Home>
-                <Profile></Profile>
             </div>
         )
     }

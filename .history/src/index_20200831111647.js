@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import Home from './home'
-import Profile from './profile'
+import home from './home'
 export default class App extends Component {
+
 
     render () {
         return (
             <div>
                 <Home></Home>
-                <Profile></Profile>
             </div>
         )
     }
