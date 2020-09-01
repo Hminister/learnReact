@@ -22,9 +22,6 @@ function Home (props) {
     )
 }
 
-
-
-
 const mapStateToProps = (state) => ({
     counter: state.counter,
     banners: state.banners,

@@ -16,10 +16,8 @@ class Profile extends PureComponent {
             }
         })
 
-        this.props.changeBanners(["banner1", "banner2", "banner3"])
-        this.props.changeRecommends(["recommend1", "recommend2", "recommend3"])
-
-        console.log(JSON.parse(json))
+        this.props.changeBanners(result.args.banners)
+        this.props.changeRecommends(result.args.recommends)
     }
     render () {
         return (

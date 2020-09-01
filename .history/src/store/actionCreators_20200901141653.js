@@ -1,7 +1,5 @@
 import {
-    ADD_COUNT,
-    CHANGE_BANNER,
-    CHANGE_RECOMMEND
+    ADD_COUNT
 } from './constants'
 
 const addAction = (count) => ({
@@ -19,7 +17,5 @@ const changeRecommendsAction = (recommends) => ({
     recommends
 })
 export {
-    addAction,
-    changeBannersAction,
-    changeRecommendsAction
+    addAction
 }

@@ -13,17 +13,14 @@ function Home (props) {
             {/* <button onClick={e => props.addCount(1)}>+1</button>
             <button onClick={e => props.addCount(5)}>+5</button> */}
             {
-                props.banners.map(item => <li>{item}</li>)
+                this.props.banners.map(item => <li>{item}</li>)
             }
             {
-                props.recommends.map(item => <li>{item}</li>)
+                this.props.banners.map(item => <li>{item}</li>)
             }
         </div>
     )
 }
-
-
-
 
 const mapStateToProps = (state) => ({
     counter: state.counter,

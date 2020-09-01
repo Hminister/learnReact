@@ -1,7 +1,7 @@
 import {
     ADD_COUNT,
-    CHANGE_BANNER,
-    CHANGE_RECOMMEND
+    changeBannersAction,
+    changeRecommendsAction
 } from './constants'
 
 
@@ -13,7 +13,7 @@ const initialState = {
 
 function reducer (state = initialState, action) {
     switch (action.type) {
-        case ADD_COUNT:
+        case ADD_NUMBER:
             return { ...state, counter: state.counter + action.num };
         case CHANGE_BANNER:
             return { ...state, banners: action.banners };

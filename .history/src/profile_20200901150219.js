@@ -19,7 +19,24 @@ class Profile extends PureComponent {
         this.props.changeBanners(["banner1", "banner2", "banner3"])
         this.props.changeRecommends(["recommend1", "recommend2", "recommend3"])
 
-        console.log(JSON.parse(json))
+        const json = {
+            "processFlag": "01",
+            "ownerId": 396,
+            "type": "apply",
+            "name": "快照1",
+            "serviceId": 335,
+            "details": [
+                {
+                    "serviceId": 335,
+                    "serviceAttr": null,
+                    "quantity": 1,
+                    "duration": 1,
+                    "serviceConfig": "{\"desc\":null,\"serviceId\":335,\"serviceName\":\"快照\",\"serviceComponent\":\"VBS\",\"inputs\":[{\"key\":\"deploy_type\",\"name\":\"部署类型\",\"value\":\"vbs\",\"hide\":true}],\"configs\":{\"name\":\"虚拟机快照测试4\",\"cloudEnvId\":\"1633\",\"resType\":\"RES-VM\",\"resVmId\":\"ca54a5efc08741d7a0c45f02ac124dba\",\"description\":null}}"
+                }
+            ]
+        }
+
+        console.log(JSON.parse(json + ""))
     }
     render () {
         return (

@@ -8,18 +8,13 @@ import {
 } from './store/actionCreators'
 
 class Profile extends PureComponent {
-    async componentDidMount () {
+    componentDidMount () {
         const result = await axios.get("https://httpbin.org/get", {
             params: {
-                banners: ["banner1", "banner2", "banner3"],
-                recommends: ["recommend1", "recommend2", "recommend3"]
+                name: "kobe",
+                age: 40
             }
         })
-
-        this.props.changeBanners(["banner1", "banner2", "banner3"])
-        this.props.changeRecommends(["recommend1", "recommend2", "recommend3"])
-
-        console.log(JSON.parse(json))
     }
     render () {
         return (

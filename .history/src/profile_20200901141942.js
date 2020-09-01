@@ -1,25 +1,14 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
-import axios from './server/request'
-import {
-    addAction,
-    changeBannersAction,
-    changeRecommendsAction
-} from './store/actionCreators'
+import { addAction } from './store/actionCreators'
 
 class Profile extends PureComponent {
-    async componentDidMount () {
-        const result = await axios.get("https://httpbin.org/get", {
-            params: {
-                banners: ["banner1", "banner2", "banner3"],
-                recommends: ["recommend1", "recommend2", "recommend3"]
-            }
+    componentDidMount () {
+        axios.get("http://123.207.32.32:8000/home/multidata").then(res => {
+            const data = res.data.data;
+            this.props.changeBanners(data.banner.list);
+            this.props.changeRecommends(data.recommend.list);
         })
-
-        this.props.changeBanners(["banner1", "banner2", "banner3"])
-        this.props.changeRecommends(["recommend1", "recommend2", "recommend3"])
-
-        console.log(JSON.parse(json))
     }
     render () {
         return (

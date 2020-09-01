@@ -19,7 +19,5 @@ const changeRecommendsAction = (recommends) => ({
     recommends
 })
 export {
-    addAction,
-    changeBannersAction,
-    changeRecommendsAction
+    addAction
 }
