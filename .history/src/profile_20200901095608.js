@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
-import { connect } from 'react-redux'
+import store from './store'
 import { addAction } from './store/actionCreators'
 
-class Profile extends PureComponent {
+export default class Profile extends PureComponent {
     render () {
         return (
             <div>
@@ -13,18 +13,8 @@ class Profile extends PureComponent {
             </div>
         )
     }
-}
 
-const mapStateToProps = (state) => ({
-    counter: state.counter
-})
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        addCount (number) {
-            dispatch(addAction(number))
-        }
+    addCount (num) {
+        store.dispatch(addAction(num))
     }
 }
-
-export default connect(mapStateToProps, mapDispatchToProps)(Profile)

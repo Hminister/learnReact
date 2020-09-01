@@ -1,21 +1,17 @@
 import React from 'react'
-// import connect from './utils/connect'
-
-import { connect } from 'react-redux'
-
+import connect from './utils/connnct'
 import { addAction } from './store/actionCreators'
 
-function Home (props) {
+function Home () {
     return (
         <div>
             <h1>HOME</h1>
-            <h1>当前基数：{props.counter}</h1>
-            <button onClick={e => props.addCount(1)}>+1</button>
-            <button onClick={e => props.addCount(5)}>+5</button>
+            <h1>当前基数：{this.props.counter}</h1>
+            <button onClick={e => this.props.addCount(1)}>+1</button>
+            <button onClick={e => this.props.addCount(5)}>+5</button>
         </div>
     )
 }
-
 const mapStateToProps = (state) => ({
     counter: state.counter
 })
@@ -23,9 +19,9 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => {
     return {
         addCount (number) {
-            dispatch(addAction(number))
+            dispatch(addAction)
         }
     }
-}
 
+}
 export default connect(mapStateToProps, mapDispatchToProps)(Home)

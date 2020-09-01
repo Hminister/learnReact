@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { connect } from 'react-redux'
+import connect from './utils/connect'
 import { addAction } from './store/actionCreators'
 
 class Profile extends PureComponent {
@@ -14,7 +14,6 @@ class Profile extends PureComponent {
         )
     }
 }
-
 const mapStateToProps = (state) => ({
     counter: state.counter
 })
@@ -27,4 +26,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Profile)
+export default connect()(Profile)

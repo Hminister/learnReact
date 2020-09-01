@@ -2,9 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Home from './home'
 import Profile from './profile'
-// import { StoreContext } from './utils/context';
-import { Provider } from 'react-redux'
-import store from './store/index'
+import { StoreContext } from './utils/context';
 export default class App extends Component {
 
     render () {
@@ -17,8 +15,4 @@ export default class App extends Component {
     }
 }
 
-ReactDOM.render(
-    <Provider store={store}>
-        <App />
-    </Provider>,
-    document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root'))

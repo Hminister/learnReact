@@ -18,7 +18,7 @@ export default class App extends Component {
 }
 
 ReactDOM.render(
-    <Provider store={store}>
+    <Context store={store}>
         <App />
-    </Provider>,
+    </Context>,
     document.getElementById('root'))

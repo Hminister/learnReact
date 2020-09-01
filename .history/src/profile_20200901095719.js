@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { connect } from 'react-redux'
+import connect from './utils/connect'
 import { addAction } from './store/actionCreators'
 
 class Profile extends PureComponent {
