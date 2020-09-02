@@ -3,13 +3,11 @@ import { connect } from 'react-redux'
 import axios from './server/request'
 import {
     addAction,
-    getHomeMultidataAction
+    changeBannersAction,
+    changeRecommendsAction
 } from './store/actionCreators'
 
 class Profile extends PureComponent {
-    componentDidMount () {
-        this.props.getHomeMultidata()
-    }
     render () {
         return (
             <div>
@@ -31,8 +29,11 @@ const mapDispatchToProps = (dispatch) => {
         addCount (number) {
             dispatch(addAction(number))
         },
-        getHomeMultidata () {
-            dispatch(getHomeMultidataAction())
+        changeBanners (banners) {
+            dispatch(changeBannersAction(banners));
+        },
+        changeRecommends (recommends) {
+            dispatch(changeRecommendsAction(recommends));
         }
     }
 }

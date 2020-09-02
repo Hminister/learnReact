@@ -12,12 +12,12 @@ function Home (props) {
             {/* <h1>当前基数：{props.counter}</h1> */}
             {/* <button onClick={e => props.addCount(1)}>+1</button>
             <button onClick={e => props.addCount(5)}>+5</button> */}
-            {
-                props.banners.map(item => <li key={item.acm}> <img src={item.image} /></li>)
+            {/* {
+                props.banners.map(item => <li>{item}</li>)
             }
             {
-                props.recommends.map(item => <li key={item.acm}> <img src={item.image} /></li>)
-            }
+                props.recommends.map(item => <li>{item}</li>)
+            } */}
         </div>
     )
 }

@@ -8,6 +8,7 @@ import {
 
 class Profile extends PureComponent {
     componentDidMount () {
+        console.log('___________________---')
         this.props.getHomeMultidata()
     }
     render () {
@@ -32,7 +33,8 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(addAction(number))
         },
         getHomeMultidata () {
-            dispatch(getHomeMultidataAction())
+            console.log'(############')
+            dispatch(getHomeMultidataAction)
         }
     }
 }

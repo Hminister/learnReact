@@ -34,7 +34,6 @@ const changeRecommendsAction = (recommends) => ({
 //     }
 // }
 
-//使用redux-saga 返回一个对象，拿到对应的actiontype
 const getHomeMultidataAction = () => ({
     type: FETCH_HOME_MULTIDATA
 })

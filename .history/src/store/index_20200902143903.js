@@ -11,6 +11,5 @@ const enhancer = composeEnhancers(applyMiddleware(thunkMiddleWare, sageMiddleWar
 
 const store = createStore(reducer, enhancer);
 
-sageMiddleWare.run(mySaga)
-
+sageMiddleWare.run()
 export default store

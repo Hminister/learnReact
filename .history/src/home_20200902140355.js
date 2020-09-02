@@ -13,10 +13,10 @@ function Home (props) {
             {/* <button onClick={e => props.addCount(1)}>+1</button>
             <button onClick={e => props.addCount(5)}>+5</button> */}
             {
-                props.banners.map(item => <li key={item.acm}> <img src={item.image} /></li>)
+                props.banners.map(item => <li key={item.acm}> <image src="item.image" /></li>)
             }
             {
-                props.recommends.map(item => <li key={item.acm}> <img src={item.image} /></li>)
+                props.recommends.map(item => <li key={item.acm}> <image src="item.image" /></li>)
             }
         </div>
     )

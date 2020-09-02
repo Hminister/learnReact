@@ -32,7 +32,7 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(addAction(number))
         },
         getHomeMultidata () {
-            dispatch(getHomeMultidataAction())
+            dispatch(getHomeMultidataAction)
         }
     }
 }

@@ -21,7 +21,7 @@ const changeRecommendsAction = (recommends) => ({
     recommends
 })
 
-//使用redux-thunk 返回一个函数
+//使用redux-thunk
 
 // const getHomeMultidataAction = () => {
 //     return (dispatch) => {
@@ -34,9 +34,8 @@ const changeRecommendsAction = (recommends) => ({
 //     }
 // }
 
-//使用redux-saga 返回一个对象，拿到对应的actiontype
 const getHomeMultidataAction = () => ({
-    type: FETCH_HOME_MULTIDATA
+    type: FETCH_HOME_MULTIDATA,
 })
 export {
     addAction,

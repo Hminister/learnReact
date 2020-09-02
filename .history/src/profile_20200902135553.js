@@ -7,9 +7,6 @@ import {
 } from './store/actionCreators'
 
 class Profile extends PureComponent {
-    componentDidMount () {
-        this.props.getHomeMultidata()
-    }
     render () {
         return (
             <div>
@@ -32,7 +29,7 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(addAction(number))
         },
         getHomeMultidata () {
-            dispatch(getHomeMultidataAction())
+            dispatch(getHomeMultidataAction)
         }
     }
 }
