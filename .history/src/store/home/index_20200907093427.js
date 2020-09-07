@@ -1,0 +1,1 @@
+import HomeReducer from './reducer'

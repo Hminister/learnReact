@@ -1,16 +1,20 @@
 import {
+    ADD_COUNT,
     CHANGE_BANNER,
     CHANGE_RECOMMEND
 } from './constants'
 
 
-const initialHome = {
+const initialState = {
+    counter: 0,
     banners: [],
     recommends: []
 }
 
-function reducer (state = initialHome, action) {
+function reducer (state = initialState, action) {
     switch (action.type) {
+        case ADD_COUNT:
+            return { ...state, counter: state.counter + action.num };
         case CHANGE_BANNER:
             return { ...state, banners: action.banners };
         case CHANGE_RECOMMEND:

@@ -9,7 +9,7 @@ const initialHome = {
     recommends: []
 }
 
-function reducer (state = initialHome, action) {
+function reducer (state = initialState, action) {
     switch (action.type) {
         case CHANGE_BANNER:
             return { ...state, banners: action.banners };

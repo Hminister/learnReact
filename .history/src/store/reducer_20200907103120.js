@@ -1,6 +1,5 @@
 import counterReducer from './profile/index'
 import HomeReducer from './home/index'
-import { combineReducers } from 'redux'
 
 
 const initialState = {
@@ -12,10 +11,5 @@ const initialState = {
 //         homeInfo: HomeReducer(state.homeInfo, action)
 //     }
 // }
-
-const reducer = combineReducers({
-    couterInfo: counterReducer,
-    homeInfo: HomeReducer
-})
 
 export default reducer

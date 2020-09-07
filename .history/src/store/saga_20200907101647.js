@@ -3,7 +3,7 @@ import axios from 'axios'
 
 import {
     FETCH_HOME_MULTIDATA
-} from "./home/constants";
+} from "./constants";
 
 import {
     changeBannersAction,

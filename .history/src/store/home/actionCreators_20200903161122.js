@@ -1,11 +1,4 @@
 import axios from 'axios'
-
-import {
-    CHANGE_BANNER,
-    CHANGE_RECOMMEND,
-    FETCH_HOME_MULTIDATA
-} from './constants.js'
-
 const changeBannersAction = (banners) => ({
     type: CHANGE_BANNER,
     banners

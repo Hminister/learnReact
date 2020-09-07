@@ -1,10 +1,12 @@
 import axios from 'axios'
-
 import {
-    CHANGE_BANNER,
-    CHANGE_RECOMMEND,
-    FETCH_HOME_MULTIDATA
-} from './constants.js'
+    ADD_COUNT,
+} from './constants'
+
+const addAction = (count) => ({
+    type: ADD_COUNT,
+    num: count
+});
 
 const changeBannersAction = (banners) => ({
     type: CHANGE_BANNER,
@@ -33,8 +35,8 @@ const changeRecommendsAction = (recommends) => ({
 const getHomeMultidataAction = () => ({
     type: FETCH_HOME_MULTIDATA
 })
-
 export {
+    addAction,
     changeBannersAction,
     changeRecommendsAction,
     getHomeMultidataAction

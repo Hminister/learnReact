@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
+import axios from './server/request'
 import { getHomeMultidataAction } from './store/home/actionCreators'
 import { addAction } from './store/profile/actionCreators'
 class Profile extends PureComponent {
@@ -19,7 +20,7 @@ class Profile extends PureComponent {
 }
 
 const mapStateToProps = (state) => ({
-    counter: state.couterInfo.counter
+    counter: state.counter
 })
 
 const mapDispatchToProps = (dispatch) => {

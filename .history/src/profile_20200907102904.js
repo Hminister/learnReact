@@ -19,7 +19,7 @@ class Profile extends PureComponent {
 }
 
 const mapStateToProps = (state) => ({
-    counter: state.couterInfo.counter
+    counter: state.counter
 })
 
 const mapDispatchToProps = (dispatch) => {
@@ -27,9 +27,6 @@ const mapDispatchToProps = (dispatch) => {
         addCount (number) {
             dispatch(addAction(number))
         },
-        getHomeMultidata () {
-            dispatch(getHomeMultidataAction())
-        }
     }
 }
 

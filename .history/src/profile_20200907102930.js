@@ -26,9 +26,6 @@ const mapDispatchToProps = (dispatch) => {
     return {
         addCount (number) {
             dispatch(addAction(number))
-        },
-        getHomeMultidata () {
-            dispatch(getHomeMultidataAction())
         }
     }
 }

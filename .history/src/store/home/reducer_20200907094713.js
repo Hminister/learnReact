@@ -4,12 +4,12 @@ import {
 } from './constants'
 
 
-const initialHome = {
+const initialState = {
     banners: [],
     recommends: []
 }
 
-function reducer (state = initialHome, action) {
+function HomeReducer (state = initialState, action) {
     switch (action.type) {
         case CHANGE_BANNER:
             return { ...state, banners: action.banners };
@@ -19,4 +19,4 @@ function reducer (state = initialHome, action) {
             return state;
     }
 }
-export default reducer
+export default HomeReducer

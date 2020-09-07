@@ -22,9 +22,11 @@ function Home (props) {
 }
 
 
+
+
 const mapStateToProps = (state) => ({
-    banners: state.homeInfo.banners,
-    recommends: state.homeInfo.recommends
+    banners: state.banners,
+    recommends: state.recommends
 })
 
 
